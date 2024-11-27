@@ -37,13 +37,17 @@ public class Operacion extends javax.swing.JFrame {
             }
         });
 
-        bienvenido.setText("Bievenido " + cuentas.name(miCuenta) + "!!!");
+        bienvenido.setFont(new java.awt.Font("Lato", 1, 24)); // NOI18N
+        bienvenido.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bienvenido.setText("Bievenido " + cuentas.name(miCuenta) + "!");
         bienvenido.addContainerListener(new java.awt.event.ContainerAdapter() {
             public void componentAdded(java.awt.event.ContainerEvent evt) {
                 bienvenidoComponentAdded(evt);
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Cuentas con un saldo de: $" + cuentas.money(miCuenta) + " pesos");
 
         bRetiro.setText("RETIRO");
@@ -71,15 +75,6 @@ public class Operacion extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(bienvenido)
-                        .addGap(156, 305, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(138, 138, 138)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -88,16 +83,18 @@ public class Operacion extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(bTranferencia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(bDepositar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 148, Short.MAX_VALUE))
+            .addComponent(bienvenido, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(151, Short.MAX_VALUE)
+                .addContainerGap(65, Short.MAX_VALUE)
                 .addComponent(bienvenido)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
-                .addGap(40, 40, 40)
+                .addGap(105, 105, 105)
                 .addComponent(bTranferencia, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(bDepositar, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -109,6 +106,7 @@ public class Operacion extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void bTranferenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bTranferenciaActionPerformed

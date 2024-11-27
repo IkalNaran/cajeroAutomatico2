@@ -112,6 +112,7 @@ public class Retiro extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtRetirarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRetirarActionPerformed
